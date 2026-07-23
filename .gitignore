@@ -1,0 +1,4 @@
+page/
+static/
+*.pyc
+__pycache__/
