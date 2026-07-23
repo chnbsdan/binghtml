@@ -31,10 +31,10 @@ jobs:
 
     - name: Deploy to page branch
       run: |
-        cd page
-        git init
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add .
-        git commit -m "⏱️ Auto build [skip ci]" || echo "No changes"
-        git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git page
+       cd page
+       git init
+       git config user.name "github-actions[bot]"
+       git config user.email "github-actions[bot]@users.noreply.github.com"
+       git add .
+       git commit -m "⏱️ Auto build [skip ci]" || echo "No changes"
+       git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git master:page
